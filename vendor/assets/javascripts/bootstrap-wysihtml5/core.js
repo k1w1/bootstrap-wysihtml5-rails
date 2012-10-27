@@ -20,19 +20,20 @@
             "emphasis":
                 "<li>" +
                   "<div class='btn-group'>" +
-                    "<a class='btn btn-small' data-wysihtml5-command='bold' title='CTRL+B'>" + locale.emphasis.bold + "</a>" +
-                    "<a class='btn btn-small' data-wysihtml5-command='italic' title='CTRL+I'>" + locale.emphasis.italic + "</a>" +
-                    "<a class='btn btn-small' data-wysihtml5-command='underline' title='CTRL+U'>" + locale.emphasis.underline + "</a>" +
+                    "<a class='btn btn-small' data-wysihtml5-command='bold' title='Bold CTRL+B'><i class='icon-bold icon-large'></i></a>" +
+                    "<a class='btn btn-small' data-wysihtml5-command='italic' title='Italic CTRL+I'><i class='icon-italic icon-large'></i></a>" +
+                    "<a class='btn btn-small' data-wysihtml5-command='underline' title='Underline CTRL+U'><i class='icon-underline icon-large'></i></a>" +
+                    "<a class='btn btn-small' data-wysihtml5-command='strikeThrough' title='Strikethrough'><i class='icon-strikethrough icon-large'></i></a>" +
                   "</div>" +
                 "</li>",
 
             "lists":
                 "<li>" +
                   "<div class='btn-group'>" +
-                    "<a class='btn btn-small' data-wysihtml5-command='insertUnorderedList' title='" + locale.lists.unordered + "'><i class='icon-list'></i></a>" +
-                    "<a class='btn btn-small' data-wysihtml5-command='insertOrderedList' title='" + locale.lists.ordered + "'><i class='icon-th-list'></i></a>" +
-                    "<a class='btn btn-small' data-wysihtml5-command='Outdent' title='" + locale.lists.outdent + "'><i class='icon-indent-right'></i></a>" +
-                    "<a class='btn btn-small' data-wysihtml5-command='Indent' title='" + locale.lists.indent + "'><i class='icon-indent-left'></i></a>" +
+                    "<a class='btn btn-small' data-wysihtml5-command='insertUnorderedList' title='" + locale.lists.unordered + "'><i class='icon-list-ul icon-large'></i></a>" +
+                    "<a class='btn btn-small' data-wysihtml5-command='insertOrderedList' title='" + locale.lists.ordered + "'><i class='icon-list-ol icon-large'></i></a>" +
+                    "<a class='btn btn-small' data-wysihtml5-command='Outdent' title='" + locale.lists.outdent + "'><i class='icon-indent-right icon-large'></i></a>" +
+                    "<a class='btn btn-small' data-wysihtml5-command='Indent' title='" + locale.lists.indent + "'><i class='icon-indent-left icon-large'></i></a>" +
                   "</div>" +
                 "</li>",
 
@@ -51,7 +52,7 @@
                       "<a href='#' class='btn btn-small btn-primary' data-dismiss='modal'>" + locale.link.insert + "</a>" +
                     "</div>" +
                   "</div>" +
-                  "<a class='btn btn-small' data-wysihtml5-command='createLink' title='" + locale.link.insert + "'><i class='icon-share'></i></a>" +
+                  "<a class='btn btn-small' data-wysihtml5-command='createLink' title='" + locale.link.insert + "'><i class='icon-share icon-large'></i></a>" +
                 "</li>",
 
             "image":
@@ -69,13 +70,13 @@
                       "<a href='#' class='btn btn-small btn-primary' data-dismiss='modal'>" + locale.image.insert + "</a>" +
                     "</div>" +
                   "</div>" +
-                  "<a class='btn btn-small' data-wysihtml5-command='insertImage' title='" + locale.image.insert + "'><i class='icon-picture'></i></a>" +
+                  "<a class='btn btn-small' data-wysihtml5-command='insertImage' title='" + locale.image.insert + "'><i class='icon-picture icon-large'></i></a>" +
                 "</li>",
 
             "html":
                 "<li>" +
                   "<div class='btn-group'>" +
-                    "<a class='btn btn-small' data-wysihtml5-action='change_view' title='" + locale.html.edit + "'><i class='icon-pencil'></i></a>" +
+                    "<a class='btn btn-small' data-wysihtml5-action='change_view' title='" + locale.html.edit + "'><i class='icon-pencil icon-large'></i></a>" +
                   "</div>" +
                 "</li>",
 
