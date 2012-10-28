@@ -6,8 +6,8 @@
         var tpl = {
             "font-styles":
                 "<li class='dropdown'>" +
-                  "<a class='btn btn-mini dropdown-toggle' data-toggle='dropdown' href='#'>" +
-                  "<i class='icon-font'></i><b class='caret'></b>" +
+                  "<a class='btn btn-mini dropdown-toggle' data-toggle='dropdown' title='Headings' rel='tooltip' href='#'>" +
+                    "<i class='icon-font'></i><b class='caret'></b>" +
                   "</a>" +
                   "<ul class='dropdown-menu'>" +
                     "<li><a data-wysihtml5-command='formatBlock' data-wysihtml5-command-value='div'>" + locale.font_styles.normal + "</a></li>" +
@@ -20,20 +20,20 @@
             "emphasis":
                 "<li>" +
                   "<div class='btn-group'>" +
-                    "<a class='btn btn-mini' data-wysihtml5-command='bold' title='Bold CTRL+B'><i class='icon-bold'></i></a>" +
-                    "<a class='btn btn-mini' data-wysihtml5-command='italic' title='Italic CTRL+I'><i class='icon-italic'></i></a>" +
-                    "<a class='btn btn-mini' data-wysihtml5-command='underline' title='Underline CTRL+U'><i class='icon-underline'></i></a>" +
-                    "<a class='btn btn-mini' data-wysihtml5-command='strikeThrough' title='Strikethrough'><i class='icon-strikethrough'></i></a>" +
+                    "<a class='btn btn-mini' data-wysihtml5-command='bold' title='Bold CTRL+B' rel='tooltip'><i class='icon-bold'></i></a>" +
+                    "<a class='btn btn-mini' data-wysihtml5-command='italic' title='Italic CTRL+I' rel='tooltip'><i class='icon-italic'></i></a>" +
+                    "<a class='btn btn-mini' data-wysihtml5-command='underline' title='Underline CTRL+U' rel='tooltip'><i class='icon-underline'></i></a>" +
+                    "<a class='btn btn-mini' data-wysihtml5-command='strikeThrough' title='Strikethrough' rel='tooltip'><i class='icon-strikethrough'></i></a>" +
                   "</div>" +
                 "</li>",
 
             "lists":
                 "<li>" +
                   "<div class='btn-group'>" +
-                    "<a class='btn btn-mini' data-wysihtml5-command='insertUnorderedList' title='" + locale.lists.unordered + "'><i class='icon-list-ul'></i></a>" +
-                    "<a class='btn btn-mini' data-wysihtml5-command='insertOrderedList' title='" + locale.lists.ordered + "'><i class='icon-list-ol'></i></a>" +
-                    "<a class='btn btn-mini' data-wysihtml5-command='Outdent' title='" + locale.lists.outdent + "'><i class='icon-indent-right'></i></a>" +
-                    "<a class='btn btn-mini' data-wysihtml5-command='Indent' title='" + locale.lists.indent + "'><i class='icon-indent-left'></i></a>" +
+                    "<a class='btn btn-mini' data-wysihtml5-command='insertUnorderedList' title='" + locale.lists.unordered + "' rel='tooltip'><i class='icon-list-ul'></i></a>" +
+                    "<a class='btn btn-mini' data-wysihtml5-command='insertOrderedList' title='" + locale.lists.ordered + "' rel='tooltip'><i class='icon-list-ol'></i></a>" +
+                    "<a class='btn btn-mini' data-wysihtml5-command='Outdent' title='" + locale.lists.outdent + "' rel='tooltip'><i class='icon-indent-right'></i></a>" +
+                    "<a class='btn btn-mini' data-wysihtml5-command='Indent' title='" + locale.lists.indent + "' rel='tooltip'><i class='icon-indent-left'></i></a>" +
                   "</div>" +
                 "</li>",
 
@@ -52,7 +52,7 @@
                       "<a href='#' class='btn btn-mini btn-primary' data-dismiss='modal'>" + locale.link.insert + "</a>" +
                     "</div>" +
                   "</div>" +
-                  "<a class='btn btn-mini' data-wysihtml5-command='createLink' title='" + locale.link.insert + "'><i class='icon-share'></i></a>" +
+                  "<a class='btn btn-mini' data-wysihtml5-command='createLink' title='" + locale.link.insert + "' rel='tooltip'><i class='icon-share'></i></a>" +
                 "</li>",
 
             "image":
@@ -70,13 +70,13 @@
                       "<a href='#' class='btn btn-mini btn-primary' data-dismiss='modal'>" + locale.image.insert + "</a>" +
                     "</div>" +
                   "</div>" +
-                  "<a class='btn btn-mini' data-wysihtml5-command='insertImage' title='" + locale.image.insert + "'><i class='icon-picture'></i></a>" +
+                  "<a class='btn btn-mini' data-wysihtml5-command='insertImage' title='" + locale.image.insert + "' rel='tooltip'><i class='icon-picture'></i></a>" +
                 "</li>",
 
             "html":
                 "<li>" +
                   "<div class='btn-group'>" +
-                    "<a class='btn btn-mini' data-wysihtml5-action='change_view' title='" + locale.html.edit + "'><i class='icon-pencil'></i></a>" +
+                    "<a class='btn btn-mini' data-wysihtml5-action='change_view' title='" + locale.html.edit + "' rel='tooltip'><i class='icon-pencil'></i></a>" +
                   "</div>" +
                 "</li>",
 
@@ -109,6 +109,8 @@
         this.toolbar = this.createToolbar(el, options || defaultOptions);
         this.editor =  this.createEditor(options);
 
+        $(".wysihtml5-toolbar a[rel=tooltip]").tooltip();
+        
         window.editor = this.editor;
 
         $('iframe.wysihtml5-sandbox').each(function(i, el){
