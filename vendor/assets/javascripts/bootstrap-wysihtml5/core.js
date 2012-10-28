@@ -6,8 +6,8 @@
         var tpl = {
             "font-styles":
                 "<li class='dropdown'>" +
-                  "<a class='btn btn-small dropdown-toggle' data-toggle='dropdown' href='#'>" +
-                  "<i class='icon-font'></i>&nbsp;<span class='current-font'>" + locale.font_styles.normal + "</span>&nbsp;<b class='caret'></b>" +
+                  "<a class='btn btn-mini dropdown-toggle' data-toggle='dropdown' href='#'>" +
+                  "<i class='icon-font'></i><b class='caret'></b>" +
                   "</a>" +
                   "<ul class='dropdown-menu'>" +
                     "<li><a data-wysihtml5-command='formatBlock' data-wysihtml5-command-value='div'>" + locale.font_styles.normal + "</a></li>" +
@@ -20,20 +20,20 @@
             "emphasis":
                 "<li>" +
                   "<div class='btn-group'>" +
-                    "<a class='btn btn-small' data-wysihtml5-command='bold' title='Bold CTRL+B'><i class='icon-bold icon-large'></i></a>" +
-                    "<a class='btn btn-small' data-wysihtml5-command='italic' title='Italic CTRL+I'><i class='icon-italic icon-large'></i></a>" +
-                    "<a class='btn btn-small' data-wysihtml5-command='underline' title='Underline CTRL+U'><i class='icon-underline icon-large'></i></a>" +
-                    "<a class='btn btn-small' data-wysihtml5-command='strikeThrough' title='Strikethrough'><i class='icon-strikethrough icon-large'></i></a>" +
+                    "<a class='btn btn-mini' data-wysihtml5-command='bold' title='Bold CTRL+B'><i class='icon-bold'></i></a>" +
+                    "<a class='btn btn-mini' data-wysihtml5-command='italic' title='Italic CTRL+I'><i class='icon-italic'></i></a>" +
+                    "<a class='btn btn-mini' data-wysihtml5-command='underline' title='Underline CTRL+U'><i class='icon-underline'></i></a>" +
+                    "<a class='btn btn-mini' data-wysihtml5-command='strikeThrough' title='Strikethrough'><i class='icon-strikethrough'></i></a>" +
                   "</div>" +
                 "</li>",
 
             "lists":
                 "<li>" +
                   "<div class='btn-group'>" +
-                    "<a class='btn btn-small' data-wysihtml5-command='insertUnorderedList' title='" + locale.lists.unordered + "'><i class='icon-list-ul icon-large'></i></a>" +
-                    "<a class='btn btn-small' data-wysihtml5-command='insertOrderedList' title='" + locale.lists.ordered + "'><i class='icon-list-ol icon-large'></i></a>" +
-                    "<a class='btn btn-small' data-wysihtml5-command='Outdent' title='" + locale.lists.outdent + "'><i class='icon-indent-right icon-large'></i></a>" +
-                    "<a class='btn btn-small' data-wysihtml5-command='Indent' title='" + locale.lists.indent + "'><i class='icon-indent-left icon-large'></i></a>" +
+                    "<a class='btn btn-mini' data-wysihtml5-command='insertUnorderedList' title='" + locale.lists.unordered + "'><i class='icon-list-ul'></i></a>" +
+                    "<a class='btn btn-mini' data-wysihtml5-command='insertOrderedList' title='" + locale.lists.ordered + "'><i class='icon-list-ol'></i></a>" +
+                    "<a class='btn btn-mini' data-wysihtml5-command='Outdent' title='" + locale.lists.outdent + "'><i class='icon-indent-right'></i></a>" +
+                    "<a class='btn btn-mini' data-wysihtml5-command='Indent' title='" + locale.lists.indent + "'><i class='icon-indent-left'></i></a>" +
                   "</div>" +
                 "</li>",
 
@@ -48,11 +48,11 @@
                       "<input value='http://' class='bootstrap-wysihtml5-insert-link-url input-xlarge'>" +
                     "</div>" +
                     "<div class='modal-footer'>" +
-                      "<a href='#' class='btn btn-small' data-dismiss='modal'>" + locale.link.cancel + "</a>" +
-                      "<a href='#' class='btn btn-small btn-primary' data-dismiss='modal'>" + locale.link.insert + "</a>" +
+                      "<a href='#' class='btn btn-mini' data-dismiss='modal'>" + locale.link.cancel + "</a>" +
+                      "<a href='#' class='btn btn-mini btn-primary' data-dismiss='modal'>" + locale.link.insert + "</a>" +
                     "</div>" +
                   "</div>" +
-                  "<a class='btn btn-small' data-wysihtml5-command='createLink' title='" + locale.link.insert + "'><i class='icon-share icon-large'></i></a>" +
+                  "<a class='btn btn-mini' data-wysihtml5-command='createLink' title='" + locale.link.insert + "'><i class='icon-share'></i></a>" +
                 "</li>",
 
             "image":
@@ -66,23 +66,23 @@
                       "<input value='http://' class='bootstrap-wysihtml5-insert-image-url input-xlarge'>" +
                     "</div>" +
                     "<div class='modal-footer'>" +
-                      "<a href='#' class='btn btn-small' data-dismiss='modal'>" + locale.image.cancel + "</a>" +
-                      "<a href='#' class='btn btn-small btn-primary' data-dismiss='modal'>" + locale.image.insert + "</a>" +
+                      "<a href='#' class='btn btn-mini' data-dismiss='modal'>" + locale.image.cancel + "</a>" +
+                      "<a href='#' class='btn btn-mini btn-primary' data-dismiss='modal'>" + locale.image.insert + "</a>" +
                     "</div>" +
                   "</div>" +
-                  "<a class='btn btn-small' data-wysihtml5-command='insertImage' title='" + locale.image.insert + "'><i class='icon-picture icon-large'></i></a>" +
+                  "<a class='btn btn-mini' data-wysihtml5-command='insertImage' title='" + locale.image.insert + "'><i class='icon-picture'></i></a>" +
                 "</li>",
 
             "html":
                 "<li>" +
                   "<div class='btn-group'>" +
-                    "<a class='btn btn-small' data-wysihtml5-action='change_view' title='" + locale.html.edit + "'><i class='icon-pencil icon-large'></i></a>" +
+                    "<a class='btn btn-mini' data-wysihtml5-action='change_view' title='" + locale.html.edit + "'><i class='icon-pencil'></i></a>" +
                   "</div>" +
                 "</li>",
 
             "color":
                 "<li class='dropdown'>" +
-                  "<a class='btn btn-small dropdown-toggle' data-toggle='dropdown' href='#'>" +
+                  "<a class='btn btn-mini dropdown-toggle' data-toggle='dropdown' href='#'>" +
                     "<span class='current-color'>" + locale.colours.black + "</span>&nbsp;<b class='caret'></b>" +
                   "</a>" +
                   "<ul class='dropdown-menu'>" +
