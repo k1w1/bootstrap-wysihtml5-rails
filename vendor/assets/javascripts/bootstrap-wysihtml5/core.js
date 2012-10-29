@@ -111,8 +111,17 @@
 
         $(".wysihtml5-toolbar a[rel=tooltip]").tooltip();
         
-        window.editor = this.editor;
-
+        if (options["autoGrow"]) {
+          this.editor.on("load", function() {
+            var editor = this;
+            var setHeight = function() {
+              editor.composer.iframe.style.height = editor.composer.element.scrollHeight + "px";
+            };
+            editor.composer.element.addEventListener("keyup", setHeight);
+            setHeight();
+          });
+        }
+        
         $('iframe.wysihtml5-sandbox').each(function(i, el){
             $(el.contentWindow).off('focus.wysihtml5').on({
                 'focus.wysihtml5' : function(){
