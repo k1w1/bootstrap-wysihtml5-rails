@@ -115,6 +115,9 @@
           this.editor.on("load", function() {
             var editor = this;
             var setHeight = function() {
+              // Grow the original textbox too.
+              editor.composer.blurStylesHost.style.height = editor.composer.element.scrollHeight + "px";
+              editor.composer.focusStylesHost.style.height = editor.composer.element.scrollHeight + "px";
               editor.composer.iframe.style.height = editor.composer.element.scrollHeight + "px";
             };
             editor.composer.element.addEventListener("keyup", setHeight);
