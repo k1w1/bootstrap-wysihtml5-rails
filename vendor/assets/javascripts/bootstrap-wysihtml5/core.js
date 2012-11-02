@@ -108,12 +108,12 @@
         this.el = el;
         this.toolbar = this.createToolbar(el, options || defaultOptions);
         this.editor =  this.createEditor(options);
-
+        var editor = this.editor;
+        
         $(".wysihtml5-toolbar a[rel=tooltip]").tooltip();
         
         if (options["autoGrow"]) {
           this.editor.on("load", function() {
-            var editor = this;
             var setHeight = function() {
               var newHeight = editor.composer.element.scrollHeight + 20;
               var containerHeight = editor.composer.iframe.style.height;
@@ -126,6 +126,26 @@
             editor.on("aftercommand:composer", setHeight);
             editor.on("paste", setHeight);
             setHeight();
+          });
+        }
+        if (options["saveCallback"]) {
+          editor.saveTimer = null;
+          
+          this.editor.on("load", function() {
+            var handleChange = function() {
+              if (editor.saveTimer) {
+                clearTimeout(editor.saveTimer);
+                editor.saveTimer = null;
+              }
+              editor.saveTimer = setTimeout(function() {
+                editor.saveTimer = null;
+                options["saveCallback"]();
+              }, 5000)
+            }
+            editor.composer.element.addEventListener("keyup", handleChange);
+            editor.on("change", handleChange);
+            editor.on("aftercommand:composer", handleChange);
+            editor.on("paste", handleChange);
           });
         }
         
