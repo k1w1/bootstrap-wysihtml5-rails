@@ -115,10 +115,13 @@
           this.editor.on("load", function() {
             var editor = this;
             var setHeight = function() {
-              // Grow the original textbox too.
-              editor.composer.blurStylesHost.style.height = editor.composer.element.scrollHeight + "px";
-              editor.composer.focusStylesHost.style.height = editor.composer.element.scrollHeight + "px";
-              editor.composer.iframe.style.height = editor.composer.element.scrollHeight + "px";
+              var newHeight = editor.composer.element.scrollHeight + 20;
+              var containerHeight = editor.composer.iframe.style.height;
+              if (newHeight > parseInt(containerHeight)) {
+                editor.composer.blurStylesHost.style.height = newHeight + "px";
+                editor.composer.focusStylesHost.style.height = newHeight + "px";
+                editor.composer.iframe.style.height = newHeight + "px";
+              }
             };
             editor.composer.element.addEventListener("keyup", setHeight);
             setHeight();
