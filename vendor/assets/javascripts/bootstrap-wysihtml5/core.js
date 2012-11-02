@@ -6,34 +6,34 @@
         var tpl = {
             "font-styles":
                 "<li class='dropdown'>" +
-                  "<a class='btn btn-mini dropdown-toggle' data-toggle='dropdown' title='Headings' rel='tooltip' href='#'>" +
+                  "<a class='btn btn-mini dropdown-toggle' data-toggle='dropdown' data-remote='true' title='Headings' rel='tooltip' href='#'>" +
                     "<i class='icon-font'></i><b class='caret'></b>" +
                   "</a>" +
                   "<ul class='dropdown-menu'>" +
-                    "<li><a data-wysihtml5-command='formatBlock' data-wysihtml5-command-value='div'>" + locale.font_styles.normal + "</a></li>" +
-                    "<li><a data-wysihtml5-command='formatBlock' data-wysihtml5-command-value='h1'>" + locale.font_styles.h1 + "</a></li>" +
-                    "<li><a data-wysihtml5-command='formatBlock' data-wysihtml5-command-value='h2'>" + locale.font_styles.h2 + "</a></li>" +
-                    "<li><a data-wysihtml5-command='formatBlock' data-wysihtml5-command-value='h3'>" + locale.font_styles.h3 + "</a></li>" +
+                    "<li><a data-wysihtml5-command='formatBlock' data-wysihtml5-command-value='div' data-remote='true'>" + locale.font_styles.normal + "</a></li>" +
+                    "<li><a data-wysihtml5-command='formatBlock' data-wysihtml5-command-value='h1' data-remote='true'>" + locale.font_styles.h1 + "</a></li>" +
+                    "<li><a data-wysihtml5-command='formatBlock' data-wysihtml5-command-value='h2' data-remote='true'>" + locale.font_styles.h2 + "</a></li>" +
+                    "<li><a data-wysihtml5-command='formatBlock' data-wysihtml5-command-value='h3' data-remote='true'>" + locale.font_styles.h3 + "</a></li>" +
                   "</ul>" +
                 "</li>",
 
             "emphasis":
                 "<li>" +
                   "<div class='btn-group'>" +
-                    "<a class='btn btn-mini' data-wysihtml5-command='bold' title='Bold CTRL+B' rel='tooltip'><i class='icon-bold'></i></a>" +
-                    "<a class='btn btn-mini' data-wysihtml5-command='italic' title='Italic CTRL+I' rel='tooltip'><i class='icon-italic'></i></a>" +
-                    "<a class='btn btn-mini' data-wysihtml5-command='underline' title='Underline CTRL+U' rel='tooltip'><i class='icon-underline'></i></a>" +
-                    "<a class='btn btn-mini' data-wysihtml5-command='strikeThrough' title='Strikethrough' rel='tooltip'><i class='icon-strikethrough'></i></a>" +
+                    "<a class='btn btn-mini' data-wysihtml5-command='bold' data-remote='true' title='Bold CTRL+B' rel='tooltip'><i class='icon-bold'></i></a>" +
+                    "<a class='btn btn-mini' data-wysihtml5-command='italic' data-remote='true' title='Italic CTRL+I' rel='tooltip'><i class='icon-italic'></i></a>" +
+                    "<a class='btn btn-mini' data-wysihtml5-command='underline' data-remote='true' title='Underline CTRL+U' rel='tooltip'><i class='icon-underline'></i></a>" +
+                    "<a class='btn btn-mini' data-wysihtml5-command='strikeThrough' data-remote='true' title='Strikethrough' rel='tooltip'><i class='icon-strikethrough'></i></a>" +
                   "</div>" +
                 "</li>",
 
             "lists":
                 "<li>" +
                   "<div class='btn-group'>" +
-                    "<a class='btn btn-mini' data-wysihtml5-command='insertUnorderedList' title='" + locale.lists.unordered + "' rel='tooltip'><i class='icon-list-ul'></i></a>" +
-                    "<a class='btn btn-mini' data-wysihtml5-command='insertOrderedList' title='" + locale.lists.ordered + "' rel='tooltip'><i class='icon-list-ol'></i></a>" +
-                    "<a class='btn btn-mini' data-wysihtml5-command='Outdent' title='" + locale.lists.outdent + "' rel='tooltip'><i class='icon-indent-right'></i></a>" +
-                    "<a class='btn btn-mini' data-wysihtml5-command='Indent' title='" + locale.lists.indent + "' rel='tooltip'><i class='icon-indent-left'></i></a>" +
+                    "<a class='btn btn-mini' data-wysihtml5-command='insertUnorderedList' data-remote='true' title='" + locale.lists.unordered + "' rel='tooltip'><i class='icon-list-ul'></i></a>" +
+                    "<a class='btn btn-mini' data-wysihtml5-command='insertOrderedList' data-remote='true' title='" + locale.lists.ordered + "' rel='tooltip'><i class='icon-list-ol'></i></a>" +
+                    "<a class='btn btn-mini' data-wysihtml5-command='Outdent' data-remote='true' title='" + locale.lists.outdent + "' rel='tooltip'><i class='icon-indent-right'></i></a>" +
+                    "<a class='btn btn-mini' data-wysihtml5-command='Indent' data-remote='true' title='" + locale.lists.indent + "' rel='tooltip'><i class='icon-indent-left'></i></a>" +
                   "</div>" +
                 "</li>",
 
@@ -52,7 +52,7 @@
                       "<a href='#' class='btn btn-mini btn-primary' data-dismiss='modal'>" + locale.link.insert + "</a>" +
                     "</div>" +
                   "</div>" +
-                  "<a class='btn btn-mini' data-wysihtml5-command='createLink' title='" + locale.link.insert + "' rel='tooltip'><i class='icon-share'></i></a>" +
+                  "<a class='btn btn-mini' data-wysihtml5-command='createLink' data-remote='true' title='" + locale.link.insert + "' rel='tooltip'><i class='icon-share'></i></a>" +
                 "</li>",
 
             "image":
@@ -70,13 +70,13 @@
                       "<a href='#' class='btn btn-mini btn-primary' data-dismiss='modal'>" + locale.image.insert + "</a>" +
                     "</div>" +
                   "</div>" +
-                  "<a class='btn btn-mini' data-wysihtml5-command='insertImage' title='" + locale.image.insert + "' rel='tooltip'><i class='icon-picture'></i></a>" +
+                  "<a class='btn btn-mini' data-wysihtml5-command='insertImage' data-remote='true' title='" + locale.image.insert + "' rel='tooltip'><i class='icon-picture'></i></a>" +
                 "</li>",
 
             "html":
                 "<li>" +
                   "<div class='btn-group'>" +
-                    "<a class='btn btn-mini' data-wysihtml5-action='change_view' title='" + locale.html.edit + "' rel='tooltip'><i class='icon-pencil'></i></a>" +
+                    "<a class='btn btn-mini' data-wysihtml5-action='change_view' data-remote='true' title='" + locale.html.edit + "' rel='tooltip'><i class='icon-pencil'></i></a>" +
                   "</div>" +
                 "</li>",
 
@@ -117,13 +117,14 @@
             var setHeight = function() {
               var newHeight = editor.composer.element.scrollHeight + 20;
               var containerHeight = editor.composer.iframe.style.height;
-              if (newHeight > parseInt(containerHeight)) {
-                editor.composer.blurStylesHost.style.height = newHeight + "px";
-                editor.composer.focusStylesHost.style.height = newHeight + "px";
-                editor.composer.iframe.style.height = newHeight + "px";
-              }
+              editor.composer.blurStylesHost.style.height = newHeight + "px";
+              editor.composer.focusStylesHost.style.height = newHeight + "px";
+              editor.composer.iframe.style.height = newHeight + "px";
             };
             editor.composer.element.addEventListener("keyup", setHeight);
+            editor.on("change", setHeight);
+            editor.on("aftercommand:composer", setHeight);
+            editor.on("paste", setHeight);
             setHeight();
           });
         }
