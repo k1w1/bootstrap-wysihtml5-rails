@@ -109,6 +109,7 @@
         this.toolbar = this.createToolbar(el, options || defaultOptions);
         this.editor =  this.createEditor(options);
         var editor = this.editor;
+        editor.saveTimer = null;
         
         $(".wysihtml5-toolbar a[rel=tooltip]").tooltip();
         
@@ -129,8 +130,6 @@
           });
         }
         if (options["saveCallback"]) {
-          editor.saveTimer = null;
-          
           this.editor.on("load", function() {
             var handleChange = function() {
               if (editor.saveTimer) {
@@ -148,6 +147,9 @@
             editor.on("paste", handleChange);
           });
         }
+        this.editor.on("destroy:composer" function() {
+          clearTimeout(editor.saveTimer);
+        });
         
         $('iframe.wysihtml5-sandbox').each(function(i, el){
             $(el.contentWindow).off('focus.wysihtml5').on({
