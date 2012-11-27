@@ -147,7 +147,7 @@
             editor.on("paste", handleChange);
           });
         }
-        this.editor.on("destroy:composer" function() {
+        this.editor.on("destroy:composer", function() {
           clearTimeout(editor.saveTimer);
         });
         
