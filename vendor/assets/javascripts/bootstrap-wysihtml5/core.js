@@ -126,7 +126,11 @@
             editor.on("change", setHeight);
             editor.on("aftercommand:composer", setHeight);
             editor.on("paste", setHeight);
-            setHeight();
+            // Do the resize after a short delay. On firefox the editor
+            // ends up too small otherwise.
+            setTimeout(function() {
+              setHeight();
+            }, 200);
           });
         }
         if (options["saveCallback"]) {
